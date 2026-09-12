@@ -1,0 +1,565 @@
+/* =========================
+   General
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f0e8;
+    color: #3d3028;
+    line-height: 1.7;
+}
+
+
+/* =========================
+   Header
+========================= */
+
+header {
+    background-color: #eee5d8;
+    border-bottom: 1px solid #d8cbbb;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    max-width: 1100px;
+    margin: auto;
+    padding: 20px 30px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav > a {
+    font-size: 25px;
+    font-weight: bold;
+    color: #4a3628;
+    text-decoration: none;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+nav ul li a {
+    color: #5d4a3c;
+    text-decoration: none;
+    font-size: 15px;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #9a7455;
+}
+
+
+/* =========================
+   Main
+========================= */
+
+main {
+    max-width: 1100px;
+    margin: auto;
+}
+
+
+/* =========================
+   Hero
+========================= */
+
+#home {
+    min-height: 90vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+    padding: 80px 30px;
+
+    background-color: #f5f0e8;
+}
+
+#home h1 {
+    font-size: 64px;
+    color: #3d2b20;
+    margin-bottom: 10px;
+}
+
+#home h2 {
+    font-size: 28px;
+    font-weight: normal;
+    color: #80634d;
+    margin-bottom: 20px;
+}
+
+#home p {
+    max-width: 600px;
+    font-size: 18px;
+    color: #66564b;
+    margin-bottom: 30px;
+}
+
+
+/* Buttons */
+
+#home a {
+    display: inline-block;
+
+    padding: 12px 24px;
+    margin-right: 10px;
+
+    border: 1px solid #76563f;
+    border-radius: 6px;
+
+    color: #fff;
+    background-color: #76563f;
+
+    text-decoration: none;
+
+    transition: all 0.3s ease;
+}
+
+#home a:hover {
+    background-color: #5d4230;
+    transform: translateY(-2px);
+}
+
+#home a:last-child {
+    background-color: transparent;
+    color: #76563f;
+}
+
+#home a:last-child:hover {
+    background-color: #76563f;
+    color: white;
+}
+
+
+/* =========================
+   Sections
+========================= */
+
+section {
+    padding: 90px 30px;
+}
+
+section h2 {
+    font-size: 36px;
+    color: #4a3628;
+    margin-bottom: 25px;
+}
+
+section p {
+    max-width: 700px;
+    color: #66564b;
+}
+
+
+/* =========================
+   About
+========================= */
+
+#about {
+    background-color: #e9dfd1;
+}
+
+
+/* =========================
+   Skills
+========================= */
+
+#skills {
+    background-color: #f5f0e8;
+}
+
+#skills ul {
+    list-style: none;
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+#skills li {
+    background-color: #e3d6c7;
+    color: #4d3b2e;
+
+    padding: 10px 20px;
+
+    border-radius: 5px;
+
+    border: 1px solid #d2c0ae;
+}
+
+
+/* =========================
+   Projects
+========================= */
+
+#projects {
+    background-color: #e9dfd1;
+}
+
+article {
+    background-color: #f8f4ee;
+
+    padding: 30px;
+    margin-bottom: 25px;
+
+    border: 1px solid #d8cbbb;
+    border-radius: 8px;
+
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+article:hover {
+    transform: translateY(-5px);
+
+    box-shadow: 0 10px 25px rgba(70, 50, 35, 0.10);
+}
+
+article h3 {
+    font-size: 24px;
+    color: #4a3628;
+    margin-bottom: 10px;
+}
+
+article p {
+    margin-bottom: 20px;
+}
+
+article a {
+    color: #76563f;
+    text-decoration: none;
+    margin-right: 20px;
+    font-weight: bold;
+}
+
+article a:hover {
+    color: #a07858;
+}
+
+
+/* =========================
+   Contact
+========================= */
+
+#contact {
+    background-color: #f5f0e8;
+}
+
+#contact a {
+    display: inline-block;
+    margin-top: 20px;
+
+    color: #76563f;
+    text-decoration: none;
+
+    border-bottom: 1px solid #76563f;
+}
+
+#contact a:hover {
+    color: #4a3628;
+}
+
+
+/* =========================
+   Footer
+========================= */
+
+footer {
+    background-color: #3d3028;
+    color: #eee5d8;
+
+    text-align: center;
+
+    padding: 25px;
+}
+
+footer p {
+    font-size: 14px;
+}
+
+
+/* =========================
+   Responsive
+========================= */
+
+@media (max-width: 768px) {
+
+    nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav ul {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    #home h1 {
+        font-size: 45px;
+    }
+
+    #home h2 {
+        font-size: 23px;
+    }
+
+    section {
+        padding: 60px 20px;
+    }
+
+    section h2 {
+        font-size: 30px;
+    }
+}
+
+/* =========================
+   About Section
+========================= */
+
+#about {
+    background-color: #e9dfd1;
+}
+
+.about-content {
+    max-width: 1000px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 70px;
+
+    align-items: center;
+}
+
+.about-text {
+    max-width: 650px;
+}
+
+.section-label {
+    font-size: 13px;
+    letter-spacing: 3px;
+    color: #8a684e;
+    font-weight: bold;
+
+    margin-bottom: 12px;
+}
+
+.about-text h2 {
+    font-size: 42px;
+    color: #3d2b20;
+    margin-bottom: 25px;
+}
+
+.about-text p:not(.section-label) {
+    font-size: 17px;
+    color: #66564b;
+    margin-bottom: 18px;
+}
+
+
+/* About Card */
+
+.about-card {
+    background-color: #f8f4ee;
+
+    padding: 30px;
+
+    border: 1px solid #d5c5b5;
+    border-radius: 10px;
+
+    box-shadow: 0 12px 30px rgba(70, 50, 35, 0.08);
+}
+
+.info {
+    padding: 18px 0;
+
+    border-bottom: 1px solid #ded2c5;
+}
+
+.info:first-child {
+    padding-top: 0;
+}
+
+.info:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.info span {
+    display: block;
+
+    font-size: 13px;
+    color: #927761;
+
+    margin-bottom: 5px;
+}
+
+.info strong {
+    color: #4a3628;
+    font-size: 16px;
+}
+
+
+/* =========================
+   About Responsive
+========================= */
+
+@media (max-width: 768px) {
+
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .about-text h2 {
+        font-size: 34px;
+    }
+
+    .about-card {
+        padding: 25px;
+    }
+}
+
+
+
+/* =========================
+   Contact Section
+========================= */
+
+#contact {
+    background-color: #f5f0e8;
+    padding: 100px 30px;
+}
+
+.contact-container {
+    max-width: 1000px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+
+    align-items: center;
+}
+
+
+/* Contact Text */
+
+.contact-text {
+    max-width: 500px;
+}
+
+.contact-label {
+    display: block;
+
+    color: #8a684e;
+    font-size: 13px;
+    font-weight: bold;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 12px;
+}
+
+.contact-text h2 {
+    color: #3d2b20;
+    font-size: 42px;
+
+    margin-bottom: 20px;
+}
+
+.contact-text p {
+    color: #66564b;
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+
+/* Contact Links */
+
+.contact-links {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-item {
+    display: block;
+
+    padding: 22px 25px;
+
+    background-color: #e9dfd1;
+
+    border: 1px solid #d5c5b5;
+    border-radius: 8px;
+
+    text-decoration: none;
+
+    transition: all 0.3s ease;
+}
+
+.contact-item:hover {
+    transform: translateX(6px);
+
+    background-color: #e3d6c7;
+
+    box-shadow: 0 8px 20px rgba(70, 50, 35, 0.08);
+}
+
+.contact-item span {
+    display: block;
+
+    color: #927761;
+    font-size: 13px;
+
+    margin-bottom: 4px;
+}
+
+.contact-item strong {
+    color: #4a3628;
+    font-size: 16px;
+}
+
+
+/* =========================
+   Responsive
+========================= */
+
+@media (max-width: 768px) {
+
+    #contact {
+        padding: 70px 20px;
+    }
+
+    .contact-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .contact-text h2 {
+        font-size: 34px;
+    }
+}
+
+
+
+

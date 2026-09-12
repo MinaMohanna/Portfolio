@@ -1,9 +1,148 @@
-<!doctype html>
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title>Mina | Portfolio</title>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <nav>
+            <a href="/">Mina</a>
+
+            <ul>
+                <li><a href="{%url 'home'%}">Home</a></li>
+                <li><a href="{%url 'about'%}">About</a></li>
+                <li><a href="{% url 'skills' %}">Skills</a></li>
+                <li><a href="{% url 'projects' %} ">Projects</a></li>
+                <li><a href="{% url 'contact' %}">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <!-- Hero Section -->
+    <main>
+
+        <section id="home">
+            <h1>Hi, I'm Mina</h1>
+
+            <h2>Python & Django Developer</h2>
+
+            <p>
+                I build simple and useful web applications
+                using Python, Django, HTML, CSS and JavaScript.
+            </p>
+
+            <a href="#projects">View My Projects</a>
+            <a href="#contact">Contact Me</a>
+        </section>
+
+
+        <!-- About -->
+        <section id="about">
+
+            <h2>About Me</h2>
+
+            <p>
+                I'm a web developer interested in backend development
+                with Python and Django.
+                I enjoy learning new technologies and building real projects.
+            </p>
+
+        </section>
+
+
+        <!-- Skills -->
+        <section id="skills">
+
+            <h2>My Skills</h2>
+
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>Python</li>
+                <li>Django</li>
+                <li>Git & GitHub</li>
+            </ul>
+
+        </section>
+
+
+        <!-- Projects -->
+        <section id="projects">
+
+            <h2>My Projects</h2>
+
+            <article>
+                <h3>Portfolio Website</h3>
+
+                <p>
+                    My personal portfolio website built with Django.
+                </p>
+
+                <a href="#">View Project</a>
+                <a href="#">GitHub</a>
+            </article>
+
+
+            <article>
+                <h3>Weather App</h3>
+
+                <p>
+                    A simple weather application built with Python.
+                </p>
+
+                <a href="#">View Project</a>
+                <a href="#">GitHub</a>
+            </article>
+
+        </section>
+
+
+        <!-- Contact -->
+        <section id="contact">
+
+            <h2>Contact Me</h2>
+
+            <p>
+                Feel free to contact me if you'd like to work together.
+            </p>
+
+            <a href="https://github.com/">GitHub</a>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <p>
+            © 2026 Mina. All rights reserved.
+        </p>
+
+    </footer>
+
+</body>
+</html>
+
+
+{% comment %} <!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Portfolio</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
   </head>
 
   <body>
@@ -16,4 +155,4 @@
     <a href="{% url 'projects' %}">Projects</a>
     <a href="{% url 'contact' %}">Contact</a>
   </body>
-</html>
+</html> {% endcomment %}

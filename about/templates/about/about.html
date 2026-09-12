@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+{% comment %} <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -13,4 +13,60 @@
     </p>
     
 </body>
-</html>
+</html> {% endcomment %}
+
+
+
+<!-- About Section -->
+
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+<section id="about">
+    <a href="{% url 'home' %}">Home</a>
+
+    <div class="about-content">
+
+        <div class="about-text">
+
+            <p class="section-label">ABOUT ME</p>
+
+            <h2>A little bit about me</h2>
+
+            <p>
+                I'm a Python and Django developer who enjoys
+                building simple and useful web applications.
+            </p>
+
+            <p>
+                I started my journey with HTML and CSS and
+                gradually moved into JavaScript, Python and Django.
+                Now I'm focused on improving my backend skills
+                and building real-world projects.
+            </p>
+
+        </div>
+
+
+        <div class="about-card">
+
+            <div class="info">
+                <span>Focus</span>
+                <strong>Backend Development</strong>
+            </div>
+
+            <div class="info">
+                <span>Based on</span>
+                <strong>Python & Django</strong>
+            </div>
+
+            <div class="info">
+                <span>Learning</span>
+                <strong>Web Development</strong>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>

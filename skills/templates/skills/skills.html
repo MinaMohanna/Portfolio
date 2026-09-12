@@ -1,19 +1,47 @@
-<!doctype html>
+{% load static %}
+
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="{% static 'css/skills.css' %}">
+
     <title>Skills</title>
-  </head>
-  <body>
-    <a href="{% url 'home' %}">Home</a>
+</head>
 
-    <h1>My Skills</h1>
+<body>
 
-    <ul>
-      {% for skill in skills %}
-      <li>{{ skill }}</li>
-      {%endfor%}
-    </ul>
-  </body>
+    <a href="{% url 'home' %}" class="home-link">Home</a>
+
+    <main class="skills-container">
+
+        <h1>My Skills</h1>
+
+        <p class="intro">
+            Technologies and tools I am learning and working with.
+        </p>
+
+        <section class="skills-list">
+
+            {% for skill in skills %}
+
+                <div class="skill-card">
+                    <h2>{{ skill }}</h2>
+                </div>
+
+            {% empty %}
+
+                <p class="empty-message">
+                    No skills yet.
+                </p>
+
+            {% endfor %}
+
+        </section>
+
+    </main>
+
+</body>
 </html>
