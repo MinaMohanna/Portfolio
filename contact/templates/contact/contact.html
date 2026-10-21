@@ -1,32 +1,18 @@
-{% comment %} <!doctype html>
+{% load static %}
+
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
   </head>
   <body>
-    <a href="{%url 'home' %}">Home</a>
-    <h1>Contact Me</h1>
-
-    {% if messages %} {%for message in messages %}
-    <p>{{ message }}</p>
-    {% endfor %} {% endif %}
-
-    <form method="POST">
-      {% csrf_token %} {{ form.as_p }}
-
-      <button type="submit">Send</button>
-    </form>
-  </body>
-</html> {% endcomment %}
-
-
-
-{% load static %}
-<link rel="stylesheet" href="{% static 'css/style.css' %}">
-
 <section id="contact">
+<a href="{%url 'home' %}">Home</a>
+
+
 
     <div class="contact-container">
 
@@ -66,4 +52,5 @@
     </div>
 
 </section>
-```
+</body>
+</html>

@@ -121,7 +121,7 @@ main {
     display: inline-block;
 
     padding: 12px 24px;
-    margin-right: 10px;
+    margin: 10px;
 
     border: 1px solid #76563f;
     border-radius: 6px;
@@ -337,6 +337,13 @@ footer p {
 
 #about {
     background-color: #e9dfd1;
+}
+
+#about a {
+    color: #76563f;
+    text-decoration: none;
+    margin-right: 20px;
+    font-weight: bold;
 }
 
 .about-content {

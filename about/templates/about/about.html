@@ -1,30 +1,23 @@
-{% comment %} <!DOCTYPE html>
+{% load static %}
+
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Me</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 <body>
-    <a href="{% url 'home' %}">Home</a>
-    <h1>About Me</h1>
-    <p>
-        I'm Learning python and django </n> and building my portfolio website.
-    </p>
-    
-</body>
-</html> {% endcomment %}
-
-
+  
 
 <!-- About Section -->
 
-{% load static %}
-<link rel="stylesheet" href="{% static 'css/style.css' %}">
 
 <section id="about">
+    
     <a href="{% url 'home' %}">Home</a>
-
     <div class="about-content">
 
         <div class="about-text">
@@ -70,3 +63,5 @@
     </div>
 
 </section>
+</body>
+</html> 
